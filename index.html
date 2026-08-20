@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05070a">
+<title>DORA7 • Links</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;font-family:Orbitron,Arial,sans-serif;background:#030406;color:#fff}
+body{
+  min-height:100vh;display:flex;justify-content:center;align-items:center;
+  overflow-x:hidden;position:relative;
+  background:
+    radial-gradient(circle at 50% 25%,rgba(0,150,255,.10),transparent 30%),
+    radial-gradient(circle at 50% 90%,rgba(0,90,255,.07),transparent 35%),
+    #030406;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.32;
+  background-image:
+    linear-gradient(rgba(0,140,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,140,255,.035) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 80%,transparent);
+}
+.wrap{width:min(430px,92vw);padding:35px 0;position:relative;z-index:1}
+.profile-area{text-align:center;margin-bottom:30px}
+.avatar{
+  width:190px;height:190px;margin:0 auto 24px;position:relative;
+  border-radius:50%;padding:7px;
+  transform-style:preserve-3d;
+  filter:drop-shadow(0 0 18px rgba(0,157,255,.48));
+}
+.avatar::before,.avatar::after{
+  content:"";position:absolute;inset:-8px;border-radius:50%;
+  background:conic-gradient(from 0deg,transparent 0 16%,#008cff 23%,#73d4ff 31%,transparent 39% 61%,#006eff 70%,transparent 78% 100%);
+  animation:spin 5s linear infinite;z-index:-2;
+}
+.avatar::after{inset:-15px;filter:blur(13px);opacity:.48;animation-duration:8s}
+.avatar img{
+  width:100%;height:100%;display:block;object-fit:cover;border-radius:50%;
+  border:2px solid rgba(91,196,255,.75);
+  box-shadow:inset 0 0 25px #000,0 0 28px rgba(0,130,255,.28);
+  background:#08090b;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.name{
+  font-size:27px;letter-spacing:5px;font-weight:800;color:#9cddff;
+  text-shadow:0 0 7px #009dff,0 0 22px rgba(0,145,255,.65);
+}
+.subtitle{margin-top:8px;font-family:Arial,sans-serif;font-size:12px;letter-spacing:3px;color:#6c8291;text-transform:uppercase}
+
+.links{display:grid;gap:15px}
+.link{
+  position:relative;display:flex;align-items:center;gap:17px;
+  width:100%;padding:18px 20px;text-decoration:none;color:#b9e8ff;
+  background:linear-gradient(145deg,rgba(9,13,18,.96),rgba(3,5,8,.96));
+  border:1px solid rgba(0,145,255,.42);border-radius:17px;
+  box-shadow:0 8px 28px rgba(0,0,0,.45),inset 0 0 18px rgba(0,122,255,.035);
+  transition:.25s ease;overflow:hidden;
+  outline:none;-webkit-tap-highlight-color:transparent;
+}
+.link:focus,.link:focus-visible,.link:active{
+  outline:none;
+}
+.link::before{
+  content:"";position:absolute;left:-100%;top:0;width:60%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(77,190,255,.10),transparent);
+  transform:skewX(-18deg);transition:.55s;
+}
+.link:hover{transform:translateY(-4px) scale(1.01);border-color:#009dff;box-shadow:0 10px 35px rgba(0,130,255,.20),inset 0 0 25px rgba(0,130,255,.07)}
+.link:hover::before{left:150%}
+.icon{
+  width:45px;height:45px;display:grid;place-items:center;flex:none;border-radius:13px;
+  border:1px solid rgba(0,155,255,.45);background:#070b10;
+  color:#49bdff;font-size:20px;box-shadow:0 0 14px rgba(0,140,255,.13);
+}
+.label{font-size:16px;font-weight:700;letter-spacing:1.5px;text-shadow:0 0 9px rgba(0,155,255,.5)}
+.desc{display:block;margin-top:4px;font-family:Arial,sans-serif;font-size:11px;color:#647b89;letter-spacing:.4px}
+.arrow{margin-left:auto;color:#39b6ff;font-size:18px;transition:.25s}
+.link:hover .arrow{transform:translateX(4px);text-shadow:0 0 10px #00aaff}
+
+.footer{text-align:center;margin-top:25px;font-family:Arial,sans-serif;color:#3e535f;font-size:10px;letter-spacing:2px}
+@media(max-width:420px){.avatar{width:165px;height:165px}.name{font-size:23px}.link{padding:16px}.label{font-size:14px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <section class="profile-area">
+    <div class="avatar"><img src="perfil.jpg" alt="DORA7"></div>
+    <div class="name">DORA7</div>
+    <div class="subtitle">me encontre nas plataformas</div>
+  </section>
+
+  <nav class="links" aria-label="Links">
+    <a class="link" href="https://kick.com/ei-dora7" target="_blank" rel="noopener noreferrer">
+      <span class="icon">K</span>
+      <span><span class="label">KICK LIVE</span><span class="desc">acompanhe as lives</span></span>
+      <span class="arrow">›</span>
+    </a>
+
+    <a class="link" href="https://www.tiktok.com/@ei_dora7?_r=1&_t=ZS-9924ulU7GCN" target="_blank" rel="noopener noreferrer">
+      <span class="icon">♪</span>
+      <span><span class="label">TIK TOK</span><span class="desc">vídeos e novidades</span></span>
+      <span class="arrow">›</span>
+    </a>
+
+    <a class="link" href="https://livepix.gg/dora7" target="_blank" rel="noopener noreferrer">
+      <span class="icon">₱</span>
+      <span><span class="label">LIVE PIX</span><span class="desc">apoie o canal</span></span>
+      <span class="arrow">›</span>
+    </a>
+  </nav>
+
+  <div class="footer">DORA7 • OFFICIAL LINKS</div>
+</main>
+</body>
+</html>
